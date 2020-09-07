@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            border:1px solid red;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="header"></div>
+    <button id="show">tampil gambar</button>
+    <button id="hide">sembunyikan gambar</button>
+    <div id="gambar">
+        <img id="load-gambar" src="asset/images/judul.jpg" alt="portofolio" width="200" height="200">
+    </div>
+    <!-- ini button -->
+    
+    
+    <script src="asset/js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $(".header").html('<p>cekson</p>');
+            $(".header").click(function(){
+                $(".header").css({"border":"1px solid blue"})
+            })   
+        });
+        
+        //Efek Animasi
+        
+        $("#load-gambar").hide();
+        
+        $("#show").click(function(){
+            $('#load-gambar').fadeIn();
+        })
+
+        $("#hide").click(function(){
+             $('#load-gambar').fadeOut(400);
+        });
+        
+      
+            
+        
+    </script>
+</body>
+</html>
